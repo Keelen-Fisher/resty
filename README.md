@@ -1,4 +1,6 @@
-# Phase 1: Changing the functions to classes.
+# Phase 1: Changing the functions to classes
+
+## Lab 26's branch is from BASE
 
 A browser based API testing tool
 
