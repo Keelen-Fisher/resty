@@ -1,9 +1,12 @@
-import React from 'react';
+import './style.scss';
 
-class Footer extends React.Component {
-  render() {
-    return <footer>&copy; 2018</footer>;
-  }
+const Footer = () => {
+
+  return(
+    <>
+      <footer data-testid="footer">&copy; 2018</footer>
+    </>
+  )
 }
 
 export default Footer;
