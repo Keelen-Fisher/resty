@@ -1,4 +1,6 @@
-# Phase 1: Changing the functions to classes
+# Rest Application: Week-Long assignment
+
+## Phase 1: Changing the functions to classes
 
 ## Lab 26's branch is from BASE
 
@@ -36,3 +38,13 @@ UML: Lab 26
 [Link to Code Sandbox:](https://singular-duckanoo-e22a19.netlify.app/)
 
 Starter Code from [Seattle Code Javascript-401d48](https://github.com/codefellows/seattle-code-javascript-401d48/tree/main/class-26/lab/starter-code)
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## Phase 2: `useState()` Hook
+
+## Lab 27' Branch is from STATE
+
+## Phase 2 Requirements
+
+- Beginning of the first of a 4-Phase build of the RESTy application, written in React. In this first phase, our goal is to setup the basic scaffolding of the application, with intent being to add more functionality to the system as we go. This initial build sets up the file structure so that we can progressively build this application in a scalable manner
