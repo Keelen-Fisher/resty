@@ -33,4 +33,6 @@ UML: Lab 26
 
 ![26](public/assets/UML%20Rough%20Draft%20Lab%2026.png)
 
+[Link to Code Sandbox:](https://singular-duckanoo-e22a19.netlify.app/)
+
 Starter Code from [Seattle Code Javascript-401d48](https://github.com/codefellows/seattle-code-javascript-401d48/tree/main/class-26/lab/starter-code)
