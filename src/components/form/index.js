@@ -44,10 +44,10 @@ function Form(props) {
           <button type="submit">GO!</button>
         </label>
         <label className="methods">
-          <span data-testid="get-test" className="checkClass" onClick={handleMethod} id="get">GET</span>
-          <span className="checkClass" id="post">POST</span>
-          <span className="checkClass" id="put">PUT</span>
-          <span className="checkClass" id="delete">DELETE</span>
+          <span data-testid="get-test" onClick={handleMethod} id="get">GET</span>
+          <span id="post">POST</span>
+          <span id="put">PUT</span>
+          <span id="delete">DELETE</span>
         </label>
       </form>
     </>

@@ -1,13 +1,13 @@
 import './style.scss';
 import JSONPretty from 'react-json-pretty';
-
+import 'react-json-pretty/themes/monikai.css'
 
 const Results = ({ data }) => {
   return (
     <section data-testid='results'>
       {data ?
         (<>
-          <span>Results
+          <span className="results">Results
           <JSONPretty data={data}/>
           </span>
         </>) :
