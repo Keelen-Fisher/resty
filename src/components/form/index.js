@@ -4,6 +4,8 @@ import './form.scss';
 // Expects a function to be sent to it as a prop
 function Form(props) {
 
+  // name of the state/ the function
+
   let [method, setMethod] = useState('get');
 
   // const handleMethod = (e) => {
@@ -41,10 +43,11 @@ function Form(props) {
           <button type="submit">GO!</button>
         </label>
         <label className="methods">
+          {/* Changing the state of the method */}
         <span id="get" onClick={() => setMethod('GET')} >GET</span>
           <span id="post" onClick={() => setMethod('POST')}>POST</span>
-          <span id="put">PUT</span>
-          <span id="delete">DELETE</span>
+          <span id="put" onClick={() => setMethod('PUT')}>PUT</span>
+          <span id="delete" onClick={() => setMethod('DELETE')}>DELETE</span>
         </label>
       </form>
     </>
@@ -53,3 +56,8 @@ function Form(props) {
 
 
 export default Form;
+
+
+
+// let [ball, setBall] = factory
+// let [club, newClub] = bouncer
