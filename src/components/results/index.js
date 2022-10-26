@@ -4,7 +4,7 @@ import 'react-json-pretty/themes/monikai.css'
 
 const Results = ({ data }) => {
   return (
-    <section data-testid='results'>
+    <section data-testid='results-section'>
       {data ?
         (<>
           <span className="results">Results
