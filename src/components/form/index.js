@@ -1,16 +1,40 @@
-
+import {useState} from 'react';
 import './form.scss';
 
+// Expects a function to be sent to it as a prop
 function Form(props) {
 
-  const handleSubmit = e => {
+  let [restingMethod, selectedMethod] = useState('get');
+
+  const handleMethod = (e) => {
+    e.preventDefault();
+    selectedMethod(e.target.id);
+  }
+
+
+  const handleSubmit = (e) => {
     e.preventDefault();
     const formData = {
-      method: 'GET',
+      method: restingMethod || 'GET',
       url: 'https://pokeapi.co/api/v2/pokemon',
     };
     props.handleApiCall(formData);
-  }
+  };
+
+  // Example from our standup
+  // [counter, setCounter] = useState(0);
+
+  // function useState(initialValue)
+  // {
+  //   const init = initialValue;
+  //   const changeTheValue = () => {
+  
+  //   }
+  //   return [init, changeTheValue];
+  // }
+
+  
+
   return (
     <>
       <form onSubmit={handleSubmit}>
@@ -20,7 +44,7 @@ function Form(props) {
           <button type="submit">GO!</button>
         </label>
         <label className="methods">
-          <span id="get">GET</span>
+          <span data-testid="get-test" onClick={handleMethod} id="get">GET</span>
           <span id="post">POST</span>
           <span id="put">PUT</span>
           <span id="delete">DELETE</span>
@@ -28,6 +52,7 @@ function Form(props) {
       </form>
     </>
   );
-}
+};
+
 
 export default Form;

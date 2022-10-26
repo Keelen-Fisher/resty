@@ -1,1 +1,10 @@
 
+$backgroundColor: rgb(219, 69, 69);
+
+results{
+  background: darken($backgroundColor, 50);
+  border-top: 1px solid #eee;
+  padding: 1em 3em;
+  margin: 0;
+  text-align: center;
+}
