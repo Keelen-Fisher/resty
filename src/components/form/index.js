@@ -4,22 +4,21 @@ import './form.scss';
 // Expects a function to be sent to it as a prop
 function Form(props) {
 
-  let [restingMethod, selectedMethod] = useState('get');
+  // name of the state/ the function
 
-  const handleMethod = (e) => {
-    e.preventDefault();
-    selectedMethod(e.target.id);
-  }
+  let [method, setMethod] = useState('get');
+
+  // const handleMethod = (e) => {
+  //   e.preventDefault();
+  //   selectedMethod(e.target.id);
+  // }
 
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const formData = {
-      method: restingMethod || 'GET',
-      url: 'https://pokeapi.co/api/v2/pokemon',
-    };
-    props.handleApiCall(formData);
-  };
+    let getUrl = e.target.url.value;
+    props.handleApiCall(getUrl, method);
+
 
   // Example from our standup
   // [counter, setCounter] = useState(0);
@@ -31,7 +30,7 @@ function Form(props) {
   
   //   }
   //   return [init, changeTheValue];
-  // }
+  }
 
   
 
@@ -44,10 +43,11 @@ function Form(props) {
           <button type="submit">GO!</button>
         </label>
         <label className="methods">
-          <span data-testid="get-test" onClick={handleMethod} id="get">GET</span>
-          <span id="post">POST</span>
-          <span id="put">PUT</span>
-          <span id="delete">DELETE</span>
+          {/* Changing the state of the method */}
+        <span id="get" onClick={() => setMethod('GET')} >GET</span>
+          <span id="post" onClick={() => setMethod('POST')}>POST</span>
+          <span id="put" onClick={() => setMethod('PUT')}>PUT</span>
+          <span id="delete" onClick={() => setMethod('DELETE')}>DELETE</span>
         </label>
       </form>
     </>
@@ -56,3 +56,8 @@ function Form(props) {
 
 
 export default Form;
+
+
+
+// let [ball, setBall] = factory
+// let [club, newClub] = bouncer
