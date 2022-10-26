@@ -96,7 +96,7 @@ UML: Lab 27
 
 ![UML](public/assets/UML%20Rough%20Draft%20For%20Lab%2027.png)
 
-[Link to Code Sandbox:]()
+[Link to Code Sandbox:](https://codesandbox.io/p/github/Keelen-Fisher/resty/draft/epic-lena?file=%2FREADME.md)
 
 Starter Code from [Seattle Code Javascript-401d48](https://github.com/codefellows/seattle-code-javascript-401d48/tree/main/class-26/lab/starter-code)
 
