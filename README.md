@@ -145,3 +145,49 @@ UML: Lab 27
 Starter Code from [Seattle Code Javascript-401d48](https://github.com/codefellows/seattle-code-javascript-401d48/tree/main/class-26/lab/starter-code)
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## Phase 4: Track History
+
+## Lab 29's Branch is from REDUCER-HOOK
+
+## Phase 4 Requirements
+
+- In phase 4, we will be tracking every API call and storing it in history
+
+## User stories
+
+- As a user, I want to see a list of my previous API calls, so that I can see the results again, quickly.
+
+- User enters an API URL
+- Chooses a REST Method
+- Clicks the “Go” button
+- Application fetches data from the URL given, with the method specified
+- Application stores the API request and returned data into state
+  - Updates the list of previous API calls
+
+- Application Displays the response headers and results separately
+- Both headers and results should be “pretty printed” JSON
+
+## Lab 29 Goals
+
+> Refactor your state management within the App component to use the `useReducer` hook.
+
+- Replace any component state managements to use derived state from `useReducer` with a reducer function and initial state.
+
+### Suggested Approach
+
+- `<App />`: Use a reducer to store and manage all application state: loading, results, history
+  - Add to history array in state after every api call
+    - method, url, results (json)
+
+- `<History />`: Iterates the history array in state and shows the previous API calls
+  - When one is clicked on, show the results in the results component
+    - Note: the results component renders whatever is in state …
+
+UML: Lab 29
+
+[Link to Code Sandbox:]()
+
+Starter Code from [Seattle Code Javascript-401d48](https://github.com/codefellows/seattle-code-javascript-401d48/tree/main/class-26/lab/starter-code)
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
