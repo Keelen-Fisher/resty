@@ -1,18 +1,13 @@
 import {useState} from 'react';
 import './form.scss';
 
-// Expects a function to be sent to it as a prop
 function Form(props) {
 
-  // name of the state/ the function
 
   let [method, setMethod] = useState('get');
   let [getUrl, setGetUrl] = useState('');
 
-  // const handleMethod = (e) => {
-  //   e.preventDefault();
-  //   selectedMethod(e.target.id);
-  // }
+  
 
 
   const handleSubmit = (e) => {
@@ -20,16 +15,7 @@ function Form(props) {
     props.handleApiCall(getUrl, method);
 
 
-  // Example from our standup
-  // [counter, setCounter] = useState(0);
 
-  // function useState(initialValue)
-  // {
-  //   const init = initialValue;
-  //   const changeTheValue = () => {
-  
-  //   }
-  //   return [init, changeTheValue];
   }
 
   
@@ -57,7 +43,3 @@ function Form(props) {
 
 export default Form;
 
-
-
-// let [ball, setBall] = factory
-// let [club, newClub] = bouncer
