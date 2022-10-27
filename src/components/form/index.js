@@ -7,6 +7,7 @@ function Form(props) {
   // name of the state/ the function
 
   let [method, setMethod] = useState('get');
+  let [getUrl, setGetUrl] = useState('');
 
   // const handleMethod = (e) => {
   //   e.preventDefault();
@@ -16,7 +17,6 @@ function Form(props) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    let getUrl = e.target.url.value;
     props.handleApiCall(getUrl, method);
 
 
@@ -39,7 +39,7 @@ function Form(props) {
       <form onSubmit={handleSubmit}>
         <label >
           <span>URL: </span>
-          <input name='url' type='text' />
+          <input name='url' type='text' onChange={(e) => setGetUrl(e.target.value)} />
           <button type="submit">GO!</button>
         </label>
         <label className="methods">

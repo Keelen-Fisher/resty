@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import axios from 'axios';
 import './app.scss';
 import Header from './components/header';
@@ -10,30 +10,39 @@ const App = () => {
 
   let [data, setData] = useState(null);
   let [requestParams, setRequestParams] = useState({});
+  let [headers, setHeaders] = useState(null);
 
-
+  useEffect(() => {
+    console.log('Testing the good ol useEffect()')
+  })
 
   const callApi = async (url, method) => {
-    let newData = await axios ({
+
+    let newData = await axios({
       method: method,
       url: url,
-    })
+    });
+
+    let params = 
+    { url, 
+      method}
+    console.log('Form: ', newData);
 
     setData(newData.data.results);
-    setRequestParams(requestParams);
+    setRequestParams(params);
+    setHeaders(newData.headers);
   }
-
-
-  return (
-    <>
-      <Header />
-      <div>Request Method: {requestParams.method}</div>
-      <div>URL: {requestParams.url}</div>
-      <Form handleApiCall={callApi} />
-      <Results data={data} />
-      <Footer />
-    </>
-  );
+    return (
+      <>
+        <Header />
+        <div>Request Method: {requestParams.method}</div>
+        <div>URL: {requestParams.url}</div>
+        <Form handleApiCall={callApi} />
+        <Results data={data} headers={headers} />
+        <Footer />
+      </>
+    );
+  
 }
 
 

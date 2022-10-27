@@ -102,3 +102,46 @@ Starter Code from [Seattle Code Javascript-401d48](https://github.com/codefellow
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+## Phase 3: `useEffect()` Hook
+
+## Lab 28' Branch is from EFFECT-HOOK
+
+## Phase 3 Requirements
+
+- In phase 3, we will be connecting RESTy to live APIs, fetching and displaying remote data. Our primary focus will be to service GET requests.
+
+## Users Stories
+
+- As a user, I want to enter the URL to an API and issue a GET request so that I can retrieve it’s data
+- As a user, I want to see the results returned from an API request in my browser in a readable format
+
+- User enters an API URL
+- Chooses a REST Method
+- Clicks the “Go” button
+- Application fetches data from the URL given, with the method specified
+- Displays the response headers and results separately
+- Both headers and results should be “pretty printed” JSON
+
+## Lab 28 Goals
+
+- Refactor application methods to allow for browser side HTTP requests to be sent.
+  - Your implementation should allow the user to set a url, method, and request body.
+- Make sure all relevant request and response data is displayed to the User.
+
+### Suggested approach
+
+- `<Form />` component, onSubmit() sends the user’s entries to the `<App />` via method sent in through props
+- `<App />`does a check on the request data from the form and updates the request variable in state with the url, method, and potentially the body
+- `<App />`has an effect hook that’s looking for changes to the request variable in state, and in response, runs the API request with the new request options from state
+- `<App />`updates state with the results of the API Request
+- `<Results />` sees the new API data as a prop and renders the JSON
+
+UML: Lab 27
+
+![UML](public/assets/UML%20Rough%20Draft%20for%20Lab%2028.png)
+
+[Link to Code Sandbox:]()
+
+Starter Code from [Seattle Code Javascript-401d48](https://github.com/codefellows/seattle-code-javascript-401d48/tree/main/class-26/lab/starter-code)
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
