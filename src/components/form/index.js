@@ -2,23 +2,17 @@ import {useState} from 'react';
 import './form.scss';
 
 function Form(props) {
-
-
   let [method, setMethod] = useState('get');
   let [getUrl, setGetUrl] = useState('');
-
-  
-
+  let [data, setData] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    props.handleApiCall(getUrl, method);
+    props.handleApiCall(getUrl, method, data);
 
 
 
   }
-
-  
 
   return (
     <>
@@ -27,6 +21,10 @@ function Form(props) {
           <span>URL: </span>
           <input name='url' type='text' onChange={(e) => setGetUrl(e.target.value)} />
           <button type="submit">GO!</button>
+        </label>
+        <label id="textarea">
+          Post/Put Input:
+          <textarea onChange={(e) => setData(e.target.value)} row="5" cols="33"></textarea>
         </label>
         <label className="methods">
           {/* Changing the state of the method */}
