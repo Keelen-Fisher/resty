@@ -1,10 +1,11 @@
+import './app.scss';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import './app.scss';
 import Header from './components/header';
 import Footer from './components/footer';
 import Form from './components/form';
 import Results from './components/results';
+import History from './components/history';
 
 const App = () => {
 
@@ -39,6 +40,7 @@ const App = () => {
         <div>URL: {requestParams.url}</div>
         <Form handleApiCall={callApi} />
         <Results data={data} headers={headers} />
+        <History/>
         <Footer />
       </>
     );

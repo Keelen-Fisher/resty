@@ -186,6 +186,8 @@ Starter Code from [Seattle Code Javascript-401d48](https://github.com/codefellow
 
 UML: Lab 29
 
+![UML](public/assets/UML%20Rought%20Draft%20for%20Lab%2029.png)
+
 [Link to Code Sandbox:]()
 
 Starter Code from [Seattle Code Javascript-401d48](https://github.com/codefellows/seattle-code-javascript-401d48/tree/main/class-26/lab/starter-code)
