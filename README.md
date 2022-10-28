@@ -150,6 +150,8 @@ Starter Code from [Seattle Code Javascript-401d48](https://github.com/codefellow
 
 ## Lab 29's Branch is from REDUCER-HOOK
 
+## Code Reviewed with Luis Rosales, Stephen Clemmer and Brandon Pitts
+
 ## Phase 4 Requirements
 
 - In phase 4, we will be tracking every API call and storing it in history

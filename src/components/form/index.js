@@ -24,7 +24,7 @@ function Form(props) {
         </label>
         <label id="textarea">
           Post/Put Input:
-          <textarea onChange={(e) => setData(e.target.value)} row="5" cols="33"></textarea>
+          <textarea onChange={(e) => setData(e.target.value)} row="5" cols="33"> Put your JSON Here:</textarea>
         </label>
         <label className="methods">
           {/* Changing the state of the method */}
